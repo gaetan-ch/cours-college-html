@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Présentation HTML & JavaScript ss</title>
+
+    <style>
+        ul {
+            box-shadow: 0 4px 10px 0 grey, 0 4px 20px 0 grey;
+            padding: 0;
+            margin: 0 auto;
+            max-width: 90%;
+            font-size: 18px;
+            font-family: Verdana, sans-serif;
+
+        }
+
+        li {
+            padding: 8px 16px;
+            border-bottom: 1px solid lightgrey;
+            list-style-type: none;
+            height: 100px;
+        }
+
+        .bouton-droit {
+            float: right;
+        }
+
+        .bouton-droit:hover {
+            color: white;
+            background-color: darkgrey;
+            cursor: pointer;
+        }
+        h1{
+            text-align: center;
+            color: #009688;
+
+            padding: 30px;
+        }
+        .en-tete {
+            background-color: #009688;
+            color: white;
+            padding: 0.01em 16px;
+            width: 60%;
+            margin: 0 auto;
+        }
+
+        img {
+            float: left;
+            width: 85px;
+        }
+
+        form {
+            box-shadow: 0 4px 10px 0 darkgrey, 0 4px 20px 0 darkgrey;
+            padding: 0.01em 16px;
+            width: 60%;
+            margin: 0 auto;
+        }
+
+        label {
+            color: grey;
+            height: 20px;
+        }
+
+        input {
+            border: 1px solid #ccc;
+            height: 20px;
+        }
+
+        p > label, p > input {
+            display: block;
+            width: 100%;
+
+        }
+
+        textarea {
+            width: 100%;
+        }
+
+        input[type="button"] {
+            height: 30px;
+            cursor: pointer;
+            padding: 8px 16px;
+            vertical-align: middle;
+            color: white;
+            text-align: center;
+            width: 120px;
+            border: 0;
+            background-color: #009688;
+        }
+    </style>
+
+    <script type="text/javascript">
+        /**
+         * Ajoute un le contenu du formulaire à la liste d'ami-e
+         */
+        function ajouterUneAmie() {
+            //window.document.getElementById("form-monami-e").getElementsByTagName());
+            // accès via l'id
+            var prenom_nom = document.getElementById("nom_prenom_id").value;
+            // accès via le nom
+            var couriel = document.getElementsByName("courriel")[0].value;
+            // accès via le formulaire
+            var date_naissance = document.getElementById("date_naissance_id").value;
+            if(date_naissance){
+                date_naissance= new Date(date_naissance).toLocaleDateString();
+            }
+            var commentaire = document.getElementById("commentaire_id").value;
+
+            var genre = "autre";
+            if(document.getElementById("femme_id").checked===true){
+                genre= "femme";
+            }
+            if(document.getElementById("homme_id").checked===true){
+                genre= "homme";
+            }
+
+            console.log(`Valeurs saisie dans mon formulaire: prenom_nom=${prenom_nom} `);
+           // alert(`Valeurs saisie dans mon formulaire: couriel=${couriel} - genre:=${genre}`);
+
+            var ul_tag = document.getElementById("liste-ami-e-s");
+            var li_tag = document.createElement('li');
+            // Ajout de l'image
+            var div_image_tag = document.createElement('div');
+            div_image_tag.setAttribute("style", "float:left");
+            if(genre==="femme"){
+                div_image_tag.innerHTML = "<img src='image/img_avatar1.png'>";
+            }else if(genre==="homme"){
+                div_image_tag.innerHTML = "<img src='image/img_avatar2.png'>";
+            }else{
+                div_image_tag.innerHTML = "<img src='image/no_avatar.gif'>";
+            }
+
+            // ajout de l'image à la balise LI
+            li_tag.appendChild(div_image_tag);
+
+            var div_infos_tag = document.createElement('div');
+            div_infos_tag.setAttribute("style", "float:left;padding:10px");
+
+            div_infos_tag.innerHTML = `<span>${prenom_nom}</span><Br/> <span>${date_naissance}</span>`;
+            li_tag.appendChild(div_infos_tag);
+
+            var div_fermer_tag = document.createElement('div');
+            div_fermer_tag.setAttribute("onclick", "parentElement.style.display='none'");
+            div_fermer_tag.setAttribute("class", "bouton-droit");
+            div_fermer_tag.innerText = "X";
+            li_tag.appendChild(div_fermer_tag);
+
+            // le balise LI et ses enfants sont terminés d'écrire, on l'ajoute au balise supérieur, LU
+            ul_tag.appendChild(li_tag);
+        }
+
+
+    </script>
+</head>
+<body>
+<h1> Liste de mes ami-e-s</h1>
+<ul id="liste-ami-e-s">
+    <li>
+        <div style="float:left"><img src="image/img_avatar1.png"></div>
+        <div style="float:left;padding:10px ">
+            <span>Swann</span><Br/>
+            <span>02/04/2008</span>
+        </div>
+        <div onclick="parentElement.style.display='none'" class="bouton-droit">X</div>
+    </li>
+    <li>
+        <div style="float:left"><img src="image/img_avatar2.png"></div>
+        <div style="float:left;padding:10px;">
+            <span>Milan</span><Br/>
+            <span>11/07/2005</span>
+        </div>
+        <div onclick="parentElement.style.display='none'" class="bouton-droit">X</div>
+    </li>
+    <li>
+        <div style="float:left"><img src="image/img_avatar3.png"></div>
+        <div style="float:left;padding:10px;">
+            <span>Mona</span><Br/>
+            <span>17/08/2011</span>
+        </div>
+        <div onclick="parentElement.style.display='none'" class="bouton-droit">X</div>
+    </li>
+</ul>
+<br/>
+<br/>
+
+
+<div class="en-tete"><h2>Renseigner mon ami-e</h2></div>
+<form id="form-monami-e" action="#" method="post">
+    <br/>
+    <p>
+        <label for="nom_prenom_id">Nom et prénom:</label>
+        <input type="text" id="nom_prenom_id" name="nom_prenom">
+    </p>
+    <p>
+        <label for="courriel_id">Courriel:</label>
+        <input type="email" id="courriel_id" name="courriel">
+    </p>
+    <p>
+        <label for="date_naissance_id">Date de naissance de mon ami-e:</label>
+        <input type="date" id="date_naissance_id" name="date_naissance">
+    </p>
+    <p>
+
+        <span><input type="radio" id="femme_id" name="genre" >  <label
+                for="femme_id">Femme</label></span>
+        <span><input type="radio" id="homme_id" name="genre" >  <label
+                for="homme_id">Homme</label></span>
+        <span><input type="radio" id="autre_id" name="genre" >  <label
+                for="autre_id">Autre</label></span>
+    </p>
+    <p>
+        <label for="commentaire_id">Commentaire:</label>
+        <textarea id="commentaire_id" name="commentaire" rows="5"></textarea>
+    </p>
+    <p>
+        <input type="button" onclick="ajouterUneAmie();" value="Ajouter"></input>
+    </p>
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+body {
+    background: none;
+    background-image: none;
+}
+
+html {
+    font-size: 12px;
+}
+
+button {
+    display: none;
+}
+
+section,
+.container,
+.slides {
+    padding: 4px;
+    margin: 0;
+    width: auto;
+    background: none;
+    background-image: none;
+    height: auto;
+    position: initial;
+    display: block;
+    overflow: visible;
+    box-shadow: 0 0 0 black;
+}
+
+.slides section:nth-of-type(1) {
+    padding-top:0;
+}
+
+.slides section:nth-of-type(1) .header {
+    display:none;
+}
+
+.no-print {
+    display: none;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+img {
+    width:100px;
+    height:100px;
+}
+
+.graph-panel svg {
+    display: none;
+}

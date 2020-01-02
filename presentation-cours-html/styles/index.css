@@ -1,0 +1,304 @@
+body,
+html {
+    padding: 0;
+    margin: 0;
+    color: #666;
+    font-family: "Noto Sans"
+}
+
+html {
+    font-size: 24px;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+/**
+    Default styling
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #333;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Noto Sans";
+    src: url("fonts/NotoSans-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Noto Sans";
+    src: url("fonts/NotoSans-Italic.ttf");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Noto Sans";
+    src: url("fonts/NotoSans-BoldItalic.ttf");
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Noto Sans";
+    src: url("fonts/NotoSans-Bold.ttf");
+    font-weight: 700;
+    font-style: normal;
+}
+
+ul li {
+    margin: 1rem 0;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    background: #fff;
+    position: fixed;
+    overflow: hidden;
+    background: url('./background.png');
+    background-size: cover;
+}
+
+.slides {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow: visible;
+    flex-wrap: nowrap;
+    align-items: center;
+    transition: transform cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.7s;
+}
+
+.slides section:nth-of-type(1) {
+    position: relative;
+    padding-top: 300px;
+    flex-direction: column;
+    display: flex;
+    /*header-height*/
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 300px;
+    background-image: url('./git_logo.png');
+    background-color: #ffa200;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.image-bar {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.image-bar img {
+    margin-right: 30px;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h1 .subtitle {
+    display: block;
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+section {
+    margin: 0 5%;
+    min-width: 90%;
+    max-width: 90%;
+    height: 90%;
+    background: white;
+    box-shadow: 0 2px 1px #aaa;
+    padding: 0px 30px;
+}
+
+section.no-back {
+    background: none;
+    box-shadow: none;
+}
+
+section.no-padding {
+    padding: 0 !important;
+}
+
+section p {
+    padding: 15px;
+}
+
+.progress-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+}
+
+.progress-bar {
+    position: relative;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform linear 0.6s;
+    width: 100%;
+    height: 100%;
+}
+
+.branch {
+    display: inline-block;
+    border-radius: 2px;
+    padding: 5px;
+    background-position: 7px center;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    padding-left: 30px;
+    color: #333;
+    background-color: #eee;
+}
+
+.rounded-button {
+    margin-left: 15px;
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+code pre {
+    margin: 0;
+    padding: 0;
+}
+
+/**
+    Custom styling
+*/
+
+.branch {
+    background-image: url('./branch.png');
+}
+
+.progress-bar {
+    background: red;
+}
+
+.interactive-zone {
+    display: flex;
+    flex-direction: row;
+}
+
+.code-panel {
+    display: flex;
+    flex-direction: column;
+    flex: 0.5;
+}
+
+.graph-panel {
+    display: flex;
+    flex: 0.5;
+}
+
+.graph-panel svg {
+    width: 100%;
+}
+
+.code-line {
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.hidden {
+    transform: scale(0);
+    transition: all 0.2s linear;
+}
+
+.shown {
+    transform: scale(1);
+    transition: all 0.2s linear;
+}
+
+.branch-active {
+    transition: fill 0.2s linear;
+    fill: green;
+}
+
+.commit-locale-feature,
+.commit-commited-file {
+    transition: all linear 0.5s;
+}
+
+.rounded-button {
+    background: blue;
+}
+
+pre.code {
+    background: #333;
+    color: white;
+    padding: 10px;
+    margin: 0;
+}
+
+.authors {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+}
+
+.authors li {
+    margin: 0;
+    padding: 0;
+}
+
+.flex-grow {
+    display: flex;
+    flex-grow: 1;
+}
+
+[data-appear] {
+    opacity: 0;
+    transition: all linear 0.2s;
+}
+
+.visible[data-appear] {
+    opacity: 1 !important;
+    transition: all linear 0.2s;
+}
+
+section .footer {
+    position: fixed;
+    bottom: 10%;
+    width: 100%;
+}
+
+section .scroll {
+    overflow: scroll;
+    height: 100%;
+}
+
+section .important-text {
+    color: #333;
+    font-weight: 600;
+}

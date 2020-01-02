@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste de mes ami-e-s</title>
+
+    <script type="text/javascript">
+    function ajouterUnAmi(){
+        //  alert("Ceci est un test");
+        var prenom_nom = document.getElementById("nom_prenom_id").value;
+        if(prenom_nom !== ""){
+            //insérer à l'intérieur du tag
+            document.getElementById("ma_balise_id").innerHTML = prenom_nom;
+        }else{
+            alert("Renseigner le prénom et le nom");
+        }
+
+
+    }
+    </script>
+</head>
+<body style="color:grey">
+
+<br/>
+
+<h1> Liste de mes ami-e-s</h1>
+<div id="ma_balise_id">rien</div>
+<ul >
+    <li style="height:30px;list-style-type: none;border: 2px solid">
+        <div style="float:left">Swann née le 02/04/1995</div>
+        <div style="float:right">X</div>
+
+    </li>
+    <li style="height:30px;list-style-type: none;border: 2px solid">
+        Milan né le 11/07/1998
+    </li>
+    <li style="height:30px;list-style-type: none;border: 2px solid">
+        Mona née le 17/08/2001
+    </li>
+</ul>
+<br/>
+<h2>Renseigner mon ami-e</h2>
+<form>
+    <p>
+        <label for="nom_prenom_id">Nom et prénom:</label>
+        <input type="text" id="nom_prenom_id" name="nom_prenom">
+    </p>
+
+    <p>
+        <label for="date_naissance_id">Date de naissance de mon ami-e:</label>
+        <input type="date" id="date_naissance_id" name="date_naissance">
+    </p>
+
+    <p>
+        <input type="button"  onclick="ajouterUnAmi();" value="Ajouter">
+    </p>
+</form>
+
+
+</body>
+</html>

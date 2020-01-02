@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Présentation  collège</title>
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/printer.css" media="print" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="progress-container">
+            <div class="progress-bar"></div>
+        </div>
+        <div class="slides">
+            <section class="no-back no-padding">
+
+                <h1>
+                    Création d'une page Web
+                </h1>
+                <ul class="authors">
+                    <li>Gaëtan Charrier</li>
+                </ul>
+            </section>
+            <section>
+                <h2>
+                    Qu'allons nous faire?
+                </h2>
+                <p>
+                    <span class="important-text">Réaliser une page permettant de saisir et lister ses ami-e-s </span>
+                </p>
+                <p>
+                    <span class="important-text">La page Web à réaliser (version avancée)</span>
+                </p>
+                <p>
+                    <span class="important-text">Ateliers: présentations puis réalisation</span>
+                </p>
+                <p>
+                    Ne pas hésiter à m'interrompre quand vous avez des questions
+                </p>
+            </section>
+            <section>
+                <h2>
+                    Gestion de mes ami-e-s
+                </h2>
+
+                Exemple
+
+            </section>
+            <section>
+                <h2>
+                    Qu'est ce qu'une page Web (page HTML)?
+                </h2>
+
+                <ul>
+                    <li >Document(page) unitaire constituant un site web (internet)</li>
+
+                    <li >Page constituée de marqueurs(balise) HTML</li>
+
+                    <li>L'HyperText Markup Language est le langage de balisage conçu pour représenter les pages web </li>
+                    <li>Un navigateur interprète les balises HTML</li>
+                </ul>
+
+            </section>
+            <section>
+                <h2>
+                    Exercice 1 - Utilisation des balises HTML
+                </h2>
+
+                <ol>
+                    <li >Créer un fichier avec l'extention .html</li>
+                    <li>Ouvrir le fichier</li>
+
+                </ol>
+                <br/>
+                <img width="100%" src="image/creer_fichier_html.png" />
+
+            </section>
+
+            <section>
+                <h2>
+                    Exercice 1 - Utilisation des balises HTML
+                </h2>
+
+
+                Saisir des balises suivantes: <br/>
+
+                <pre><xmp>
+                    <html>
+                        <head>
+                        </head>
+                        <body>
+                            Mon texte
+                        </body>
+                    </html>
+                </xmp></pre>
+            </section>
+
+            <section>
+                <h2>
+                    Atelier 1 - A retenir
+                </h2>
+                <p  class="important-text"  >
+                Une page web est l’élément unitaire constitutif du site web. Elle est formée d’éléments visibles et invisibles à l’oeil. Les éléments visibles sont le texte, les images, les animations et vidéo. Les éléments invisibles sont composés de codes interprétés par le navigateur pour assurer la mise en page des éléments visibles et leurs éventuelles interactions possibles avec l’utilisateur.
+                </p>
+            </section>
+            <section>
+                <h2>
+                    Comment mettre en forme le texte (les balises)?
+                </h2>
+
+                <ul>
+                    <li >Utilisation des styles CSS (feuilles de style en cascade)</li>
+
+                    <li >Un style est indiqué à une ou plusieurs balises: présentation</li>
+                    <li>Style: mise en page, couleur, bordure, affichage ou non...</li>
+                    <li>En cascade car des attributs de style sont appliqués à la balise et à ses sous balises</li>
+
+                </ul>
+            </section>
+            <section>
+                <h2>
+                    Atelier 2 - Mise en forme, style CSS
+                </h2>
+                <p>
+                    Utilisation d'un éditeur en ligne: https://glitch.com/edit/#!/proud-actress
+                </p>
+
+                <img width="100%" src="image/editeur_en_ligne.png" />
+            </section>
+            <section>
+                <h2>
+                    Atelier 3 - Comment interagir avec l'utilisateur?
+                </h2>
+                Jusqu'à présent la page s'affiche et ne bouge plus:le contenu est static
+                <Br/><Br/>
+                Question ouverte: Quels sont les interactions que l'on peut rencontrer?
+
+            </section>
+            <section>
+                <h2>
+                    Atelier 3 - Comment interagir avec l'utilisateur?
+                </h2>
+                Question ouverte: Quels sont les interactions que l'on peut rencontrer?
+                <ul>
+                    <li>Sur des évènements: clique, passage de la souris...</li>
+                    <li>Saisie de l'utilisateur</li>
+                    <li>Déclancher une vidéo</li>
+                </ul>
+                JavaScript est un langage de programmation qui permet de créer du contenu mis à jour de façon dynamique, de contrôler le contenu multimédia, d’animer des images...
+            </section>
+            <section>
+                <h2>
+                    Atelier 3 - Le JavaScript: langage de programmation
+                </h2>
+                <ul>
+                    <li>Exécuter du code en réponse à certains évènements se produisant sur une page web</li>
+                    <li>Faire des opérations sur des morceaux de texte (appelés en programmation « chaînes de caractères » ou « strings » en anglais)
+                    <li>Afficher des informations à l'utilisateur</li>
+                </ul>
+                Et bien d'autres choses...
+            </section>
+            <section>
+                <h2>
+                    Atelier 3 - Le JavaScript: langage de programmation
+                </h2>
+                <pre><code>
+                    <div style="float:left" >&lt;div style="float:left;color:red" onclick="alert('toto')"&gt;X&lt;/div&gt;</div><div style="float:right;color:red"  onclick="alert('toto')">X</div>
+                    <br>
+                    var prenom_nom = document.getElementById("nom_prenom_id").value;
+
+                </code></pre>
+            </section>
+            <section>
+                <h2>
+                    Modèle de données, Exemple
+                </h2>
+                <img src="image/dataCellRow.png" />
+                <div class="footer">Source : HBase in action</div>
+            </section>
+
+            <section>
+                <h2>
+                    Architecture: HMaster
+                </h2>
+                <p>
+                    <img width="100%" src="image/HBaseArchitecture-HMaster.png" />
+                </p>
+                <div class="footer">Source: https://mapr.com/blog/in-depth-look-hbase-architecture/</div>
+            </section>
+            <section>
+                <h2>
+                    Architecture: Une région contient des lignes CONSÉCUTIVES
+                </h2>
+                <p>
+                    <img width="100%" src="image/HBaseArchitecture-regions-values.png" />
+
+                </p>
+            </section>
+            <!--section>
+                <h2>
+                    Architecture: .MetaTable et Root
+                </h2>
+
+               
+                <div>
+                    <img style="width:60%" src="image/HBaseArchitecture-Sequence_1.png" />
+                </div>
+            </section>
+            <section>
+                <h2>
+                    Architecture: .MetaTable et Root (source "HBase in action")
+                </h2>
+                <div class="scroll">
+                    <img src="image/StepToGetRow.png" />
+                </div>
+
+            </section>
+
+
+            <section classs="no-padding no-back">
+                <h2>
+                    Accès via Java
+                </h2>
+
+                <pre><code>
+final String prefix = "91049";
+Scan scan = new Scan();
+scan.setStartRow(Bytes.toBytes(prefix));
+scan.setStopRow(addUnOctet(Bytes.toBytes(prefix)));
+
+// données dans la ligne
+ResultScanner resultScanner = table.getScanner(scan);
+int nbeResult = 0;
+for (Result result : resultScanner)
+{
+ sysout(Bytes.toString(result.getValue(Bytes.toBytes("OFFRE"),
+                                     Bytes.toBytes("DESCRIPTION"))));
+ nbeResult++;
+}
+System.out.println("Nombre de résultat : " + nbeResult);
+                    </code></pre>
+
+            </section -->
+            <section classs="no-padding no-back">
+                <h2>
+                    Accès via Java
+                </h2>
+                <pre><code>
+final String prefix = "91049";
+Scan scan = new Scan();
+
+scan.setRowPrefixFilter(prefix);
+scan.setMaxVersions(1);
+
+// données dans la ligne
+ResultScanner resultScanner = table.getScanner(scan);
+int nbeResult = 0;
+for (Result result : resultScanner)
+{
+
+    nbeResult++;
+}
+System.out.println("Nombre de résultat : " + nbeResult);
+                        </code></pre>
+
+            </section>
+            <section>
+                <h2>
+                    Accès via Java
+                </h2>
+                <p>
+                    scan.setCaching(35000) --> quantité d'offre obtenue par appel RPC, attention à la mémoire, attention au timeout sous HBase
+                    <BR/> A paramétrer avec le maxResultSize qui définit le nombre d'octets maximum à récupèrere auprès du serveur.
+                </p>
+                <p>
+                    scan.next(35000) --> détermine également le nombre d'offre obtenue par appel RPC
+                </p>
+                <p>
+                    scan.setMaxVersions(1); --> une seule version des cellules des colonnes seront retournés par HBase
+                </p>
+            </section>
+            <section>
+                <h2>
+                    Autres options : Filter
+                </h2>
+                <p>
+                    Filtre les données par valeur dans les cellules
+                </p>
+                <p>
+                    Avantage: le filtre est exécuté sur le serveur HBase
+                </p>
+                <p>
+                    Utilisation des Regex. ex: ValueFilter(=,'regexString:.*TwitBase.*')
+                </p>
+            </section>
+            <section>
+                <h2>
+                    Autres accès à Hbase: Http
+                </h2>
+                <p>
+                    Servcie Rest à déployer et disponible sous Horton
+                </p>
+                <img src="image/http.png" />
+                <div class="footer">Source: HBase in Action</div>
+            </section>
+            <section>
+                <h2>
+                    Autres accès à Hbase: Thrift
+                </h2>
+                <p>
+                    Client Thrift (Permet un binding entre différent langage)
+                    <BR/>Service Thrift à déployer et disponible sous Horton
+                </p>
+                <img src="image/thrift.png" />
+                <div class="footer">Source: HBase in Action</div>
+            </section>
+            <section>
+                <h2>
+                    Autres accès à Hbase: HBase Shell
+                </h2>
+                $unix> hbase shell
+                <pre><code>
+HBASE> list  // Liste toutes les tables
+
+HBASE> scan "pmap:INDIVIDU_HB_V2", {raw => true, LIMIT =>1}
+
+
+Résultat:
+ROW         COLUMN+CELL
+1000000013  column=Identite:DC_CIVILITE_ID, timestamp=1508538749075, value=M.
+1000000013  column=Identite:DC_CIVILITE_ID, timestamp=150853800000, value=Melle.
+1000000013  column=Identite:DC_CODEPOSTAL, timestamp=1508538749075, value=51100
+1000000013  column=Identite:DC_CODEPOSTALLOCALITE, timestamp=1508538749075, value=51100 REIMS
+1000000013  column=Identite:DC_COMMUNE_ID, timestamp=1508538749075, value=51454
+1000000013  column=Identite:DC_NIR, timestamp=1508538749075, value=1410199121384
+1000000013  column=Identite:DC_NOMCORRESPONDANCE, timestamp=1508538749075, value=GUTAJ
+
+                </code></pre>
+
+            </section>
+            <section>
+                <h2>
+                    Autres accès à Hbase: HBase Shell
+                </h2>
+                $unix> hbase shell
+                <pre><code>
+ HBASE> create 'matable', 'premiereFamille'
+ HBASE> put 'matable', 'mapremierecle', 'premiereFamille:nomColonne', 'la valeur de ma cellule'
+ HBASE> get 'matable' , 'mapremierecle'
+                    </code></pre>
+
+            </section>
+            <section>
+                <h2>
+                    Autres accès à Hbase: Shell unix
+                </h2>
+                <p>
+                    <pre><code>
+        #!/bin/sh
+        # Création de deux tables
+        exec $HBASE_HOME/bin/hbase shell &lt;&lt;EOF
+
+        create 'matable', 'premiereFamille'
+        create 'matable2', 'premiereFamille'
+
+        EOF
+                    </code></pre>
+                </p>
+            </section>
+            <section>
+                <h2>
+                    Hive Création de la Table HBase
+                </h2>
+
+                <pre><code>
+CREATE TABLE IF NOT EXISTS OFFRE_DESCRIPTION_HB (
+key struct&lt;col1:string, col2:string&gt;,
+ID_FICHIER string,
+ID_OFFRE string,
+ID_VERSION_OFFRE string,
+DESCRIPTION string
+)
+ROW FORMAT DELIMITED
+COLLECTION ITEMS TERMINATED BY '~'
+STORED BY 'org.apache.hadoop.hive.hbase.HBaseStorageHandler'
+WITH SERDEPROPERTIES ("hbase.columns.mapping" = ":key,
+OFFRE:ID_FICHIER,OFFRE:ID_OFFRE,OFFRE:ID_VERSION_OFFRE,OFFRE:DESCRIPTION")
+TBLPROPERTIES ("hbase.table.name" = "fb00_uda03400: OFFRE_DESCRIPTION_HB ");
+</code></pre>
+
+            </section>
+            <section>
+                <h2>
+                    Hive Insertion dans la Table HBase
+                </h2>
+
+                <pre><code>
+INSERT INTO TABLE OFFRE_DESCRIPTION_HB  SELECT
+ struct(md5(OFF_PUB_TMP.id_ficher) , OFF_PUB_TMP.ID_OFFRE),
+ OFF_PUB_TMP.id_ficher,
+ OFF_PUB_TMP.ID_OFFRE,
+ OFF_PUB_TMP.ID_VERSION_OFFRE,
+ IF(OFF_PUB_TMP.DESCRIPTION is not null, OFF_PUB_TMP.DESCRIPTION, '')
+FROM TMP_OFFRE_PUBLIEE_HIVE;
+    </code></pre>
+
+            </section>
+
+            <section>
+                <h2>
+                    Use Case: La clé composite, utilisation de préfixe
+                </h2>
+                <p>
+                    <ul>
+                        <li>Utilisation de la commande scan</li>
+                        <li>On passe la première et la dernier ligne (exclue)</li>
+                        <li>La première ligne est le préfix</li>
+                        <li>La dernière ligne est le préfix + 1 octet</li>
+                        <li>HBase localise rapidement la première ligne</li>
+                        <li>HBase lit jusqu'à trouver le dernière ligne</li>
+                    </ul>
+                </p>
+
+            </section>
+            <section>
+                <h2>
+                    Use case: clé composite, Asaele
+                </h2>
+                <p>
+                    <ul>
+                        <li>récupèrer les offres par fichier et par type d'erreur</li>
+                        <li>Rowkey: ID_FICHIER~TYPE_ERREUR~ID_OFFRE</li>
+                        <li>Une seule table</li>
+                        <li>Préfix: ID_FICHIER~TYPE_ERREUR</li>
+                        <li>Récupération de 30 000 offres entre 4 et 10 secondes</li>
+                        <li>""Remplace" les jointures d'une base relationnelle: dénormalisation</li>
+                    </ul>
+                </p>
+            </section>
+            <section>
+                <h2>
+                    Use Case: La clé composite, utilisation de préfixe (exemple)
+                </h2>
+                <p>
+                    <table>
+                        <tr>
+                            <th>RowKeys</th>
+                            <th>value</th>
+                            <th>Commentaire</th>
+                        </tr>
+                        <tr>
+                            <td>15633_111111</td>
+                            <td>bla bla blas</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>15896_5666988</td>
+                            <td>bla bla blas</td>
+                            <td> -->> Première ligne (Incluse)</td>
+                        </tr>
+                        <tr>
+                            <td>15896_5668966</td>
+                            <td>bla bla blas</td>
+                            <td> -->> Incluse</td>
+                        </tr>
+                        <tr>
+                            <td>15902_5667778</td>
+                            <td>bla bla blas</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>15902_56677999</td>
+                            <td>bla bla blas</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </p>
+
+            </section>
+            <section>
+                <h2>
+                    Use Case: La clé composite avec TimeStamp
+                </h2>
+                <p>
+                    <ul>
+                        <li>Objectif:Récupèrer le dernier accès d'un utilisateur à l'application</li>
+                        <li>Rowkey: MD5(ID_USER)~REVERSE(Timestamp)</li>
+                        <li>Pourquoi reverse: pour que la première ligne lue soit la dernière en date</li>
+                        <li>Cette clé n'est pas adaptée pour récupèrer tous les utilisateurs s'étant connecté hier (Rowkey :
+                            NBE_JOUR_DEPUIS_1970 ~ ID_USER)</li>
+                    </ul>
+                </p>
+                <p>REVERSE: Long.MAX_VALUE - timestamp</p>
+            </section>
+
+
+            <!--section>
+                <h2>
+                    La clé composite, utilisation de préfixe (en java)
+                </h2>
+                <p>
+
+                    start_row = toBytes(prefix); “15896” devient byte[][‘1’,”5”,”8”,”9”,”6”]
+                </p>
+                <p>
+                    end_row = Arrays.copyOf(start_row, start_row.length);
+                </p>
+                <p>
+                    // ajout d’un octet sur le dernier caractère (Derbière ligne exclue)
+                    <BR/> end_row[start_row.length - 1]++;
+                    <br/> byte[][‘1’,”5”,”8”,”9”,”6”] devient byte[][‘1’,”5”,”8”,”9”,”7”]
+                </p>
+
+            </section -->
+            <section>
+                <h2>
+                    La clé composite, Hash, sur une partie de la clé
+                </h2>
+                <p>
+                    Exemple: MD5(user_id)id_request
+                </p>
+                <p>
+                    Le préfix a toujours la même longueur, pour un MD5, 32 caractères
+                </p>
+                <p>
+                    Les données sont plus uniformément réparties en les régions HBase et donc dans le cluster
+                </p>
+                <p>
+                    Le déléimiteur après le préfix n'est plus nécessaire
+                </p>
+            </section>
+            <section>
+                <h2>
+                    Use case: Géographie
+                </h2>
+                <p>
+                    Geographic Information Systems (GIS)
+                </p>
+                <p>
+                    Par exemple, récupèrer les offres proches d'un lieu donné
+                </p>
+            </section>
+
+
+            <script src="./highlight/highlight.pack.js "></script>
+
+            <!-- Framework code, do not touch -->
+            <script src="./js/framework/main.js "></script>
+            <script src="./js/framework/htmprez.js "></script>
+            <script src="./js/framework/page-reference.js "></script>
+            <script src="./js/framework/prepare-html-highlight.js "></script>
+            <script src="./js/framework/target-slide.js "></script>
+
+            <!-- user code -->
+
+            <script src="./js/main.js "></script>
+
+</body>
+
+</html>
