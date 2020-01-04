@@ -1,8 +1,43 @@
-<html>
+<!DOCTYPE html>
+<html lang="fr">
 <head>
-    <title>Ma liste d'ami-e-s</title>
+    <meta charset="UTF-8">
+    <title>Liste de mes ami-e-s</title>
 </head>
 <body>
+
+<br/>
+
+<h1> Liste de mes ami-e-s</h1>
+<ul id="liste-ami-e-s">
+    <li>
+        Swann née le 02/04/1995
+    </li>
+    <li>
+        Milan né le 11/07/1998
+    </li>
+    <li>
+        Mona née le 17/08/2001
+    </li>
+</ul>
+<br/>
+<h1>Renseigner mon ami-e</h1>
+<form>
+    <p>
+        <label for="nom_prenom_id">Nom et prénom:</label>
+        <input type="text" id="nom_prenom_id" name="nom_prenom">
+    </p>
+
+    <p>
+        <label for="date_naissance_id">Date de naissance de mon ami-e:</label>
+        <input type="date" id="date_naissance_id" name="date_naissance">
+    </p>
+
+    <p>
+        <input type="button" value="Ajouter">
+    </p>
+</form>
+
 
 </body>
 </html>

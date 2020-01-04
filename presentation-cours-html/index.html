@@ -29,42 +29,35 @@
                 <h2>
                     Qu'allons nous faire?
                 </h2>
+                <br><br>
                 <p>
-                    <span class="important-text">Réaliser une page permettant de saisir et lister ses ami-e-s </span>
+                    <span style="size:40px" class="important-text">Réaliser une page permettant de saisir et lister ses ami-e-s </span>
                 </p>
-                <p>
-                    <span class="important-text">La page Web à réaliser (version avancée)</span>
-                </p>
-                <p>
-                    <span class="important-text">Exercices: présentations puis réalisation</span>
-                </p>
-                <p>
-                    Ne pas hésiter à m'interrompre quand vous avez des questions
-                </p>
+
             </section>
             <section>
                 <h2>
                     Gestion de mes ami-e-s
                 </h2>
-
-                Exemple
+                <img height="70%" src="image/application_finale.png"/>
 
             </section>
+
             <section>
                 <h2>
-                    Qu'est ce qu'une page Web (page HTML)?
+                    Applications utilisées pendant les exercices
                 </h2>
 
-                <ul>
-                    <li >Document(page) unitaire constituant un site web (internet)</li>
-
-                    <li >Page constituée de marqueurs(balises) HTML</li>
-
-                    <li>L'HyperText Markup Language est le langage de balisage conçu pour représenter les pages web </li>
-                    <li>Un navigateur interprète les balises HTML</li>
-                </ul>
+                <table>
+                    <tr><td>Navigateur</td><td><img width="60%" src="image/navigateur.png"/></td>
+                        <td>Explorateur</td><td><img width="60%" src="image/explorateur.png"/></td>
+                    </tr>
+                    <tr><td>&nbsp;	</td></tr>
+                    <tr><td>Bloc-note</td><td><img width="60%" src="image/blocnote.png"/></td></tr>
+                </table>
 
             </section>
+
             <section>
                 <h2>
                     Exercice 1 - Utilisation des balises HTML
@@ -84,16 +77,13 @@
                 <h2>
                     Exercice 1 - Utilisation des balises HTML
                 </h2>
-
-
-                Saisir des balises suivantes: <br/>
-
+                Saisir des balises suivantes:
                 <pre><xmp>
                     <html>
                         <head>
                         </head>
                         <body>
-                            Mon texte
+                            Hello word!!!
                         </body>
                     </html>
                 </xmp></pre>
@@ -101,14 +91,30 @@
 
             <section>
                 <h2>
-                    Exercice 1 - A retenir
+                    Exercice 1 - Utilisation des balises HTML
                 </h2>
-                <p  class="important-text"  >
-                Une page web est l’élément unitaire constitutif du site web. Elle est formée d’éléments visibles et invisibles à l’oeil.
-                    <Br>Les éléments visibles sont le texte, les images, les animations et vidéo.
-                    <Br>Les éléments invisibles sont composés de codes interprétés par le navigateur pour assurer la mise en page des éléments visibles et leurs éventuelles interactions possibles avec l’utilisateur.
-                </p>
+                Le navigateur interprète le contenu HTML du fichier (ressource)
+                <br/>
+                <img width="80%" height="80%" src="image/HTML-to-Render-Tree-to-Final-compressor.png" />
+
+
             </section>
+            <section>
+                <h2>
+                    Qu'est ce qu'une page Web (page HTML)?
+                </h2>
+
+                <ul>
+                    <li >Document(page) unitaire constituant un site web (internet)</li>
+
+                    <li >Page constituée de marqueurs(balises) HTML</li>
+
+                    <li>L'HyperText Markup Language est le langage de balisage conçu pour représenter les pages web </li>
+                    <li>Un navigateur interprète les balises HTML</li>
+                </ul>
+
+            </section>
+
             <section>
                 <h2>
                     Comment mettre en forme le texte (les balises)?
@@ -230,6 +236,22 @@
             </section>
             <section>
                 <h2>
+                    Exercice 5 (faculatif) - Représentation des balises/éléments HTML en un modéle d'objet utilisable
+                </h2>
+                    <ul>
+                        <li>Le DOM (Document <b>Object</b> Model) est le représentation mémoire des balises HTML utilisable par un programme.</li>
+                        <li>Le DOM est un arbre qui se ramifie en plusieurs branches enfants, chacune pouvant avoir des feuilles</li>
+                        <li>Le premier noeud, &lt;HTML&gt;, est le tronc, les premières branches,  &lt;HEAD&gt; et  &lt;BODY&gt;</li>
+                    </ul>
+            </section>
+            <section>
+                <h2>
+                    Exercice 5 (faculatif) - Représentation des balises/éléments HTML en un modéle d'objet utilisable
+                </h2>
+                <img width="80%" height="80%" src="image/dom.png" />
+            </section>
+            <section>
+                <h2>
                     Exercice 5 (faculatif) - Suppression d'un-e ami-e de la liste
                  </h2>
                  Avec ce que vous savez, comment faire?
@@ -237,10 +259,16 @@
             
             <section>
                 <h2>
-                    Architecture client serveur
+                    Communication navigateur / serveur web
                 </h2>
-                 
+                <ol>
+                    <li>Le navigateur interprète l'adresse saisie http://{Hôte}/{Page demandée}</li>
+                    <li>le nom de l'hôte est transformé en IP</li>
+                    <li>Demande de connection</li>
+                    <li>Echange de ressources par les actions HTTP: GET, POST...</li>
+                </ol>
             </section>
+        </div>
         </div>
     </div>
 
