@@ -37,15 +37,23 @@
             </section>
             <section>
                 <h2>
+                    Qu'est ce qu'une application informatique?
+                </h2>
+                <p>
+                    <span class="important-text">Application - Application Web</span>
+                </p>
+
+            </section>
+            <section>
+                <h2>
                     Gestion de mes ami-e-s
                 </h2>
                 <img height="70%" src="image/application_finale.png"/>
 
             </section>
-
             <section>
                 <h2>
-                    Applications utilisées pendant les exercices
+                    Outils/Applications utilisés pendant les exercices
                 </h2>
 
                 <table>
@@ -53,23 +61,33 @@
                         <td>Explorateur</td><td><img width="60%" src="image/explorateur.png"/></td>
                     </tr>
                     <tr><td>&nbsp;	</td></tr>
-                    <tr><td>Bloc-note</td><td><img width="60%" src="image/blocnote.png"/></td></tr>
+                    <tr><td>Bloc-notes</td><td><img width="60%" src="image/blocnote.png"/></td></tr>
                 </table>
 
             </section>
+            <section>
+                <h2>
+                    Editeur en ligne
+                </h2>
+                <p>
+                    Utilisation d'un éditeur en ligne:  https://glitch.com/edit<Br>
+                    https://glitch.com/edit/#!/proud-actress
+                </p>
 
+                <img width="100%" src="image/editeur_en_ligne.png" />
+            </section>
             <section>
                 <h2>
                     Exercice 1 - Utilisation des balises HTML
                 </h2>
 
                 <ol>
-                    <li >Créer un fichier avec l'extention .html</li>
-                    <li>Ouvrir le fichier</li>
-
+                    <li >Ouvrir l'explorateur</li>
+                    <li>Ouvrir le fichier "decouverte-balises.html" par un double clique</li>
+                    <li>Le contenu du fichier s'affiche dans le navigateur</li>
                 </ol>
                 <br/>
-                <img width="100%" src="image/creer_fichier_html.png" />
+                <img width="100%" src="image/explorateur-les-exercices.png" />
 
             </section>
 
@@ -81,9 +99,10 @@
                 <pre><xmp>
                     <html>
                         <head>
+                            <title>Ceci est le titre</title>
                         </head>
                         <body>
-                            Hello word!!!
+                            <H1>Bonjour à tous!!!</H1>
                         </body>
                     </html>
                 </xmp></pre>
@@ -96,7 +115,6 @@
                 Le navigateur interprète le contenu HTML du fichier (ressource)
                 <br/>
                 <img width="80%" height="80%" src="image/HTML-to-Render-Tree-to-Final-compressor.png" />
-
 
             </section>
             <section>
@@ -129,36 +147,26 @@
 
                 </ul>
             </section>
-            <section>
-                <h2>
-                    Exercice 2 - Mise en forme, style CSS
-                </h2>
-                <p>
-                    Utilisation d'un éditeur en ligne:  https://glitch.com/edit<Br>
-                    https://glitch.com/edit/#!/proud-actress
-                </p>
 
-                <img width="100%" src="image/editeur_en_ligne.png" />
-            </section>
             <section>
                 <h2>
                     Exercice 3 - Comment interagir avec l'utilisateur?
                 </h2>
                 Jusqu'à présent la page s'affiche et ne bouge plus, le contenu est statique.
                 <Br/><Br/>
-                Question ouverte: Quels sont les interactions que l'on peut rencontrer?
+                Question ouverte: Quelles sont les interactions que l'on peut rencontrer?
 
             </section>
             <section>
                 <h2>
                     Exercice 3 - Comment interagir avec l'utilisateur?
                 </h2>
-                Question ouverte: Quels sont les interactions que l'on peut rencontrer?
+                Question ouverte: Quelles sont les interactions que l'on peut rencontrer?
                 <ul>
                     <li>Sur des évènements: clique, passage de la souris...</li>
                     <li>Chargement de la page, données reçues du serveur</li>
                     <li>Saisie de l'utilisateur</li>
-                    <li>Déclancher une vidéo</li>
+                    <li>Déclencher une vidéo</li>
                 </ul>
                 JavaScript est un langage de programmation qui permet de créer du contenu mis à jour de façon dynamique, de contrôler le contenu multimédia, d’animer des images...
             </section>
@@ -177,15 +185,14 @@
                 <h2>
                     Exercice 3 - Le JavaScript: langage de programmation
                 </h2>
-                Afficher une valeur
+                Afficher une valeur:
                 <pre><code >
-
-
-                &lt;div onclick="alert('ee');"&gt;
-                    <div onclick="alert('test');">XXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div>
+                &lt;div onclick="alert('bonjour à tous');"&gt;
+                    <div onclick="alert('Bonjour à tous');">Contenu de la balise div -- cliquez sur moi !!!</div>
                     &lt;/div&gt;
-
                 </code></pre>
+                <br>
+                Démonstration
             </section>
             <section>
                 <h2>
@@ -196,7 +203,7 @@
                     <br>
     var prenom_nom = "";
     if(prenom_nom === ""){
-        alert("Vous devez renseignez votre prénom et votre nom");
+        alert("Vous devez renseigner votre prénom et votre nom");
     }
                 </code></pre>
             </section>
@@ -218,11 +225,11 @@
                 <h2>
                     Exercice 3 - Le JavaScript: langage de programmation
                 </h2>
-                    Récupèrer une valeur saisie dans un champs, afficher une valeur
+                    Récupérer une valeur saisie dans un champs, afficher une valeur
                 <pre><code >
     var prenom_nom = document.getElementById("nom_prenom_id").value;
     if(prenom_nom === ""){
-        document.getElementById("ma_balise_id").value = prenom_nom;
+        document.getElementById("ma_balise_id").innerHTML = prenom_nom;
     }
 
     &lt;div id="ma_balise_id"&gt;avant&lt;/div&gt;
@@ -232,21 +239,21 @@
                 <h2>
                     Exercice 4 - Ajout d'un-e ami-e à la liste
                  </h2>
-                 Avec ce que vous savez, comment faire?
+                 Savez vous comment faire?
             </section>
             <section>
                 <h2>
-                    Exercice 5 (faculatif) - Représentation des balises/éléments HTML en un modéle d'objet utilisable
+                    Exercice 5 (faculatif) - Représentation des balises/éléments HTML en un modèle d'objets utilisables
                 </h2>
                     <ul>
-                        <li>Le DOM (Document <b>Object</b> Model) est le représentation mémoire des balises HTML utilisable par un programme.</li>
-                        <li>Le DOM est un arbre qui se ramifie en plusieurs branches enfants, chacune pouvant avoir des feuilles</li>
-                        <li>Le premier noeud, &lt;HTML&gt;, est le tronc, les premières branches,  &lt;HEAD&gt; et  &lt;BODY&gt;</li>
+                        <li>Le DOM (Document <b>Object</b> Model) est la représentation mémoire des balises HTML utilisable par un programme.</li>
+                        <li>Le DOM est un arbre qui se ramifie en plusieurs branches, chacunes des branches pouvant avoir des feuilles</li>
+                        <li>Le premier noeud, &lt;HTML&gt, est le tronc, les premières branches,  &lt;HEAD&gt; et  &lt;BODY&gt;</li>
                     </ul>
             </section>
             <section>
                 <h2>
-                    Exercice 5 (faculatif) - Représentation des balises/éléments HTML en un modéle d'objet utilisable
+                    Exercice 5 (faculatif) - Représentation des balises/éléments HTML en un modèle d'objets utilisables
                 </h2>
                 <img width="80%" height="80%" src="image/dom.png" />
             </section>
@@ -254,7 +261,7 @@
                 <h2>
                     Exercice 5 (faculatif) - Suppression d'un-e ami-e de la liste
                  </h2>
-                 Avec ce que vous savez, comment faire?
+                 Savez-vous comment faire?
             </section>
             
             <section>
@@ -263,7 +270,7 @@
                 </h2>
                 <ol>
                     <li>Le navigateur interprète l'adresse saisie http://{Hôte}/{Page demandée}</li>
-                    <li>le nom de l'hôte est transformé en IP</li>
+                    <li>Le nom de l'hôte est transformé en IP</li>
                     <li>Demande de connection</li>
                     <li>Echange de ressources par les actions HTTP: GET, POST...</li>
                 </ol>
