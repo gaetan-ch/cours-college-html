@@ -27,11 +27,8 @@ Déroulé de l’initiation :
   Comment mettre en forme les balises HTML?
   
         
-* Ex 3 : Introduction au JavaScript
-     Qu'est-ce que le JavaScript ?
-     Récupération du contenu d'une balise et affichage dans la page
 
-* Ex 4 : Le Java Script, mise en pratique dans notre application
+* Ex 3 : Le Java Script, mise en pratique dans notre application
      Ajout d'un-e ami-e et affichage dans la liste    
 
 * Pour aller plus loin : Architecture client/serveur
